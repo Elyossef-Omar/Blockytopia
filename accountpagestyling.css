@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    background-color: #174d67;
+    overflow: hidden;
+    background-image: url('media/accountpagebg.png');
+    background-size: 150% 56%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #174d67;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#container > div:nth-child(1) {
+    padding-top: 13vh;
+    padding-left: 5vw;
+    animation: 0.5s ease-out 0s 1 slideInFromTop;
+}
+
+#container > div:nth-child(1) > label {
+    color: white;
+    font-family: century-gothic, sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+    user-select: none;
+}
+
+#container > div:nth-child(1) > input {
+    background: none;
+    border: calc(1px + 0.1vh) solid white;
+    width: 14ch;
+    height: 1em;
+    font-family: century-gothic, sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+    color: whitesmoke;
+}
+
+#container > div:nth-child(1) > input:focus {
+    outline: 2px solid #83b8ca;
+}
+
+#container > div:nth-child(2) {
+    color: #83b8ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1em solid #83b8ca;
+    animation: 0.5s ease-out 0s 1 slideInFromTop;
+}
+
+#container > div:nth-child(3) {
+    grid-area: 2 / 1 / 3 / 3;
+    background-image: url('media/accountpagebg.png');
+    background-size: 150% 100%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#container > div:nth-child(3) > p {
+    color: white;
+    font-family: century-gothic, sans-serif;
+    font-weight: bold;
+    font-size: 200%;
+    margin: 0px 0px 5vw 5vw;
+    animation: 0.5s ease-out 0s 1 slideInFromTop;
+    user-select: none;
+}
+
+#container > div:nth-child(3) > div {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+#container > div:nth-child(3) > div > a > button
+, #container > div:nth-child(3) > div > button
+ {
+    font-size: 400%;
+    background-color: #83b8ca;
+    border: none;
+    border-radius: 0.1em;
+    font-family: century-gothic, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    padding: 0.1em 0.2em 0.1em 0.2em;
+    cursor: pointer;
+    user-select: none;
+}
+
+#container > div:nth-child(3) > div > a > button:hover
+, #container > div:nth-child(3) > div > button:hover {
+    background-color: #699dad;
+}
+
+#ConnectingPage {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
+#Chat-panel {
+    width: 70%;
+    background-color: #106990;
+    margin: 0 auto;
+    border-radius: 0.2em;
+    border: 0.2em solid #72a6be;
+    box-shadow: 2px 2px 0px black inset, 2px 2px 0px black;
+    position: relative;
+    height: 30%;
+    min-height: 10%;
+    max-height: 50%;
+    user-select: none;
+    overflow: hidden;
+    padding-bottom: 0.2em;
+}
+
+#content {
+    height: fit-content;
+    max-width: calc(100% - 0.2em);
+    overflow-y: auto;
+    padding-left: 0.2em;
+    color: white;
+    font-family: century-gothic, sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    bottom: 0px;
+}
+
+.resize-handle {
+    height: 2em;
+    width: 5%;
+    margin: 0 auto;
+    cursor: ns-resize;
+    position: relative;
+    border-radius: 0 0 1em 1em;
+    border: 0.3em solid #a2e1f8;
+    border-top: none;
+    background-color: #7aadc8;
+    background-image: linear-gradient(to top, #72a6be 50%, transparent 50%);
+    background-size: 100% 200%;
+    box-shadow: 0px 0px 0.4em #174c675b inset, 0 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em 0;
+}
+
+.resize-handle::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 0.3em;
+    background-color: #c7edff;
+    margin-bottom: 0.3em;
+}
+
+.resize-handle::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 0.3em;
+    background-color: #c7edff;
+}
+
+#ConnectingPage > button {
+    font-size: 400%;
+    background-color: #83b8ca;
+    border: none;
+    border-radius: 0.1em;
+    font-family: century-gothic, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    padding: 0.1em 0.2em 0.1em 0.2em;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+
+#ConnectingPage > button:hover {
+    background-color: #699dad;
+}
+
+.Chat-message {
+    color: lightgoldenrodyellow;
+    line-height: 1.1em;
+    margin-bottom: 0.3em;
+}
+
+.server {
+    color: #f5b242;
+}
+
+.private {
+    color: lightcoral;
+}
+
+.world {
+    color: #c7edff;
+}
+
+@keyframes slideInFromTop {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes SlideToRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100vw); }
+}
+
+@keyframes SlideFromRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100vw); }
+}
